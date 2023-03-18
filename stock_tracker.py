@@ -1,6 +1,5 @@
 import yfinance as yf
 import sqlite3
-import sys
 
 def stock_price_pull(stock_names = ['SPY', 'IEF'], 
                      time_period = '1y', 
@@ -16,8 +15,7 @@ def stock_price_pull(stock_names = ['SPY', 'IEF'],
                              period = time_period,
                              interval = time_interval)
     
-    stocks_clean = stocks_raw[measure].sort_values(by = 'Date', 
-                                           ascending = False)
+    stocks_clean = stocks_raw[measure].sort_index(ascending = False)
     
     con = sqlite3.connect(database)
 
@@ -28,4 +26,9 @@ def stock_price_pull(stock_names = ['SPY', 'IEF'],
     print(f'Stock price pull complete. The table is stored in the {database} database in the {table_name} table.')
 
 if __name__ == "__main__":
-    stock_price_pull()
+    print('What stocks do you want data for? Please separate stock names with a comma (e.g. SPY, IEF)')
+    stock_names = input()
+    stock_names = stock_names.replace(' ','')
+    stock_names = stock_names.split(',')
+    print(stock_names)
+    stock_price_pull(stock_names = stock_names)
