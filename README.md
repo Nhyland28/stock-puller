@@ -1,7 +1,37 @@
 # stock-puller
 UpWork job for Cody Clifford
 
-# How to use:
+# How to use (online):
+
+## 1. Download a SQL database
+
+Download a free SQL database. This will be where you can view the SQL table and run SQL queries on it. I suggest [DB Browser for SQLite](https://sqlitebrowser.org/dl/).
+
+## 2. Navigate to Google Colab.
+
+Navigate to this [link](https://colab.research.google.com/drive/1puwtJS2rXRsZMkDXbz0KY3SMtfMeoxrP#scrollTo=L4tJkU6O3n1P). Google Colab allows us to run programs using Google's cloud resources. It is necessary to ensure the program doesn't crash the computer when doing large data pulls (e.g. all US stocks).
+
+## 3. Upload necessary files
+
+1. Click on the Folder icon on the left side of the screen.
+2. Click the "Upload to session storage" button.
+3. Upload any csv of lists and the stocks.db file
+
+## 4. Run the program
+
+## 5. Download the results
+
+Download the stocks.db file.
+
+## 4. View Results
+
+Open up the database program you downloaded earlier, navigate to the `stock-puller` folder on your `Desktop` and then open the `stocks.db` file from in the database program. You should now be able to see your tables (see image below)
+
+![Screenshot of DB Browser for SQLite](db_screenshot.png)
+
+The `Database Structure` section contains your table names. The `Execute SQL` section is where you can run SQL queries on your tables.
+
+# How to use (locally - not suggested right now):
 
 ## 1. Download a SQL database
 
