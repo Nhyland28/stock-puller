@@ -1,5 +1,4 @@
 # stock-puller
-UpWork job for Cody Clifford
 
 # How to use (online):
 
